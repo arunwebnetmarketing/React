@@ -1,0 +1,201 @@
+@import "../../../styles/variable.scss";
+.custom {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: $font-size;
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+}
+
+.custom-non {
+    display: inline;
+}
+
+.form-bg {
+    background: $light-gray-color;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $box-size;
+    width: $box-size;
+    background-color: $formcolor;
+    border: solid 1px $border-gray;
+    border-radius: 3px;
+}
+
+.custom .checkmark:after {
+    left: 6px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid $white-color;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.custom:hover input~.checkmark {
+    background-color: $border-gray;
+}
+
+.custom input:checked~.checkmark {
+    background-color: #2196f3;
+}
+
+.checkmark:after {
+    content: ".";
+    position: absolute;
+    display: none;
+}
+
+.custom input:checked~.checkmark:after {
+    display: block;
+}
+
+.search-section {
+    position: relative;
+    font-size: $font-size;
+    i {
+        position: absolute;
+        padding: 9px;
+        color: #ccc;
+        background: $white-color;
+        margin: 2px;
+    }
+    .search {
+        text-indent: 25px;
+    }
+    label {
+        width: 100%;
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
+
+.rounded-50 {
+    border-radius: $rounded-50 !important;
+}
+
+.check_box {
+    .check-main {
+        display: block;
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 12px;
+        cursor: pointer;
+    }
+    .check-main input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 16px;
+        width: 16px;
+        background-color: $border-gray;
+        border-radius: 50%;
+    }
+    .check-main:hover input~.checkmark {
+        background-color: $white-color;
+        border: solid 1px $blue;
+    }
+    .check-main input:checked~.checkmark {
+        background-color: $white-color;
+        border: solid 1px $blue;
+    }
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    .check-main input:checked~.checkmark:after {
+        display: block;
+    }
+    .check-main .checkmark:after {
+        top: 2px;
+        left: 2px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $blue;
+    }
+}
+
+.invalid-feedback {
+    display: inherit !important;
+}
+
+.rounded-search {
+    i {
+        margin-left: 12px;
+    }
+    .search {
+        border-radius: $rounded-50;
+        text-indent: 35px;
+    }
+}
+
+.form-control.is-invalid {
+    border-color: $dark-red;
+}
+
+::placeholder {
+    font-size: $font-size;
+    color: $text-color;
+}
+
+.text-indent-25 {
+    text-indent: 25px;
+}
+
+.mdndatory label::after {
+    content: "*";
+    color: $dark-red;
+    font-size: $font-size + 4px;
+    position: absolute;
+    padding: 0 3px;
+}
+
+.mandatory label::after {
+    content: "*";
+    color: $dark-red;
+    font-size: $font-size + 4px;
+    position: absolute;
+    padding: 0 3px;
+}
+
+form {
+    .form-control {
+        box-shadow: inset 0 1px 2px $formcolor;
+    }
+    .form-control:focus {
+        border-color: $blue;
+        outline: 0;
+        box-shadow: none;
+        background: $white-color !important;
+    }
+}
+
+.form-control {
+    box-shadow: inset 0 1px 2px $formcolor;
+}
+
+.form-control:focus {
+    border-color: $blue;
+    outline: 0;
+    box-shadow: none;
+    background: $white-color !important;
+}
